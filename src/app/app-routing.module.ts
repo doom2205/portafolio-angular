@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import {Routes, RouterModule} from '@angular/router'
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
@@ -15,7 +15,7 @@ const app_routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(app_routes)
+        RouterModule.forRoot(app_routes,{useHash:true})
     ],
     exports:[
         RouterModule
