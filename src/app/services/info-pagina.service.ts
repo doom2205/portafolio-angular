@@ -16,12 +16,12 @@ export class InfoPaginaService {
             
   }
 
-  private cargar_Firebase(){
+   private cargar_Firebase(){
 
-  this.http.get('https://angular-html-5bc66-default-rtdb.firebaseio.com/equipo.json')
-  .subscribe((resp:any)=>{
-    this.fireb=resp;
-    console.log(resp);
+    this.http.get('https://angular-html-5bc66-default-rtdb.firebaseio.com/equipo.json')
+    .subscribe((resp:any)=>{
+     this.fireb=resp;
+        
   })
   }
   private cargarData(){
