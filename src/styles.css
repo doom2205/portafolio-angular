@@ -1,10 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
-@charset "UTF-8";
-
-/*!
- * animate.css - https://animate.style/
- * Version - 4.1.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
+@keyframes louding-9 {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+div.nine {
+    width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  div.nine span {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--orange);
+    animation:
+      louding-9 2s linear infinite;
+  }
+  div.nine span::before {
+    content: "";
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 3px;
+    left: -1px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--orange);
+    animation:
+      louding-9 3s linear infinite;
+  }
+  div.nine span::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 9px;
+    left: 1px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--orange);
+    animation:
+      louding-9 1.5s linear infinite;
+  }
+  
+  
+  
+  
+  
+  /* You can add global styles to this file, and also import other style files */
+  /*@charset "UTF-8";
+  
+  /*!
+  * animate.css - https://animate.style/
+  * Version - 4.1.1
+  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2020 Animate.css
  */
@@ -122,7 +174,7 @@ print {
         -webkit-animation-iteration-count: 1 !important;
         animation-iteration-count: 1 !important
     }
-
+    
     .animate__animated[class*=Out] {
         opacity: 0
     }
@@ -139,7 +191,7 @@ print {
         -webkit-transform: translateZ(0);
         transform: translateZ(0)
     }
-
+    
     40%,
     43% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
@@ -147,14 +199,14 @@ print {
         -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
         transform: translate3d(0, -30px, 0) scaleY(1.1)
     }
-
+    
     70% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
         transform: translate3d(0, -15px, 0) scaleY(1.05)
     }
-
+    
     80% {
         -webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
         transition-timing-function: cubic-bezier(.215, .61, .355, 1);
