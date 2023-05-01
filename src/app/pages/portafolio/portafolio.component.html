@@ -11,9 +11,10 @@
       <div *ngIf="!productosService.cargar" 
        class="animate__animated animate__slideInDown ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
         <a *ngFor="let prod of productosService.productos"
-        href="portfolio-item.html" class="rk-item ae-masonry__item">
+        [routerLink]="['/item', prod.cod]" class="rk-item ae-masonry__item">
         <img src="assets/productos/{{prod.url}}.jpg" alt="">
-          <div class="item-meta">
+          <div [routerLink]="['/item', prod.cod]"
+          class="item-meta">
             <h2>{{prod.titulo}}</h2>
             <p>{{prod.categoria}}</p>
           </div>

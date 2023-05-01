@@ -7,7 +7,7 @@ import { Infopagina } from '../interface/info-pagina.interface';
 })
 export class InfoPaginaService {
   info : Infopagina = {};
-  cargada = false;
+  cargada = true;
   fireb:any[]=[];
 
   constructor(private http: HttpClient) { 
@@ -21,7 +21,7 @@ export class InfoPaginaService {
     this.http.get('https://angular-html-5bc66-default-rtdb.firebaseio.com/equipo.json')
     .subscribe((resp:any)=>{
      this.fireb=resp;
-        
+      this.cargada=false;
   })
   }
   private cargarData(){
